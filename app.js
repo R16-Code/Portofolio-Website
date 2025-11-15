@@ -289,41 +289,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === 7. TOMBOL "COPY EMAIL" ===
     const copyEmailBtn = document.getElementById('copy-email-btn');
-    
+
     if (copyEmailBtn) {
+        const originalLabel = copyEmailBtn.getAttribute('aria-label');
+
         copyEmailBtn.addEventListener('click', async () => {
             const email = 'ridhomaulana25@gmail.com';
             
             try {
                 await navigator.clipboard.writeText(email);
                 
-                // Simpan teks original
-                const originalText = copyEmailBtn.textContent;
-                
-                // Update teks tombol
-                copyEmailBtn.textContent = 'Tersalin!';
+                // 1. TAMBAHKAN KELAS 'copied' (INI KUNCINYA)
+                copyEmailBtn.classList.add('copied');
+                copyEmailBtn.setAttribute('aria-label', 'Email Tersalin!');
                 copyEmailBtn.disabled = true;
-                copyEmailBtn.style.opacity = '0.7';
                 
-                // Reset setelah 2 detik
+                // 2. KEMBALIKAN SETELAH 2 DETIK
                 setTimeout(() => {
-                    copyEmailBtn.textContent = originalText;
+                    copyEmailBtn.classList.remove('copied');
+                    copyEmailBtn.setAttribute('aria-label', originalLabel);
                     copyEmailBtn.disabled = false;
-                    copyEmailBtn.style.opacity = '1';
                 }, 2000);
                 
             } catch (err) {
                 console.error('Failed to copy email:', err);
-                
-                // Fallback: manual selection
-                const tempInput = document.createElement('input');
-                tempInput.value = email;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-                
-                // Tampilkan feedback
                 alert(`Email disalin: ${email}`);
             }
         });
