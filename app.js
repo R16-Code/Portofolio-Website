@@ -2,23 +2,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === 1. DATA SKILLS ===
     const hardSkills = [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'PHP',
-        'MySQL',
-        'UI/UX Design',
-        'Figma',
-        'Wireframing',
-        'Prototyping',
-        'Microsoft Office',
-        'GitHub'
+        { 
+            name: 'HTML', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' 
+        },
+        { 
+            name: 'CSS', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' 
+        },
+        { 
+            name: 'JavaScript', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' 
+        },
+        { 
+            name: 'PHP', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' 
+        },
+        { 
+            name: 'MySQL', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' 
+        },
+        { 
+            name: 'Figma', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' 
+        },
+        { 
+            name: 'GitHub', 
+            logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' 
+        }
     ];
 
     const softSkills = [
         'Adaptasi',
         'Kerja Tim',
-        'Komunikasi',
         'Semangat Belajar',
         'Pemecahan Masalah',
         'Manajemen Waktu',
@@ -30,57 +46,99 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = [
         {
             id: 0,
-            title: "Landing Page UMKM",
-            stack: "HTML, CSS, JavaScript",
+            title: "Dapoer Djawa",
+            stack: "PHP, MySQL, CSS",
             description: "Sebuah landing page modern dan responsif yang dirancang untuk mempromosikan produk UMKM lokal. Fokus pada desain yang bersih, call-to-action yang jelas, dan optimasi kecepatan load.",
-            image_url: "https://placehold.co/600x400/253745/CCD0CF?text=Landing+Page&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202310_h1kqcn.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202155_rtslie.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202234_o2etdz.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299526/Cuplikan_layar_2025-11-16_202252_alvula.png"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: null
         },
         {
             id: 1,
-            title: "Sistem Kasir Sederhana (PHP)",
-            stack: "PHP, MySQL, CSS",
+            title: "Moviepedia",
+            stack: "PHP, MySQL, Tailwind",
             description: "Aplikasi kasir (Point of Sale) berbasis web sederhana yang dibuat dengan PHP natif dan database MySQL. Fitur termasuk manajemen produk, pencatatan transaksi, dan laporan penjualan sederhana.",
-            image_url: "https://placehold.co/600x400/4A5C6A/CCD0CF?text=Sistem+Kasir&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210445_cmua9x.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302045/Cuplikan_layar_2025-11-16_210554_oqwd8b.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302854/Cuplikan_layar_2025-11-16_211628_cye1cs.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210635_b5unow.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302043/Cuplikan_layar_2025-11-16_210644_sydp9l.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210655_pnxmqx.png"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: null
         },
         {
             id: 2,
-            title: "Dashboard Monitoring Data",
-            stack: "JavaScript, Chart.js, CSS",
+            title: "AERO",
+            stack: "Figma",
             description: "Frontend untuk dashboard admin yang menampilkan visualisasi data menggunakan Chart.js. Data diambil dari API (dummy) dan ditampilkan dalam bentuk grafik bar, line, dan pie.",
-            image_url: "https://placehold.co/600x400/253745/CCD0CF?text=Dashboard&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303521/LOGIN_hkmvqt.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303524/DASHBOARD_byo4r7.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303418/iPhone_16_-_9_bnxmuk.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303419/iPhone_16_-_10_vjtknc.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303420/iPhone_16_-_11_venris.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303428/iPhone_16_-_12_ldcsvs.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303519/iPhone_16_-_13_qevy1q.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303520/iPhone_16_-_15_edh0fi.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303521/iPhone_16_-_16_fbcqtq.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303414/iPhone_16_-_6_ogtraa.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763303415/iPhone_16_-_7_wv6hpx.png"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: "https://www.figma.com/proto/WyieoHPQBtOYxcjuxNFq4g/Untitled?node-id=421-2516&t=0gj0eIkb7EBGRQiY-1"
         },
         {
             id: 3,
             title: "UI/UX Mobile App Food Finder",
             stack: "Figma, Prototyping",
             description: "Desain UI/UX dan prototipe interaktif untuk aplikasi mobile pencari makanan. Proses desain mencakup wireframing, high-fidelity design, dan prototyping di Figma.",
-            image_url: "https://placehold.co/600x400/4A5C6A/CCD0CF?text=UI+UX+Design&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://placehold.co/600x800/4A5C6A/CCD0CF?text=Food+Finder+-+Splash&font=poppins",
+                "https://placehold.co/600x800/4A5C6A/CCD0CF?text=Food+Finder+-+Home&font=poppins",
+                "https://placehold.co/600x800/4A5C6A/CCD0CF?text=Food+Finder+-+Detail&font=poppins",
+                "https://placehold.co/600x800/4A5C6A/CCD0CF?text=Food+Finder+-+Map&font=poppins"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: "https://www.figma.com/your-design-link"
         },
         {
             id: 4,
             title: "Portfolio v1",
             stack: "HTML, CSS",
             description: "Versi pertama portofolio personal saya. Proyek ini fokus pada penguasaan fundamental HTML semantik dan CSS layouting (Flexbox dan Grid).",
-            image_url: "https://placehold.co/600x400/253745/CCD0CF?text=Portfolio+v1&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://placehold.co/800x600/253745/CCD0CF?text=Portfolio+v1+-+Home&font=poppins",
+                "https://placehold.co/800x600/253745/CCD0CF?text=Portfolio+v1+-+Projects&font=poppins"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: null
         },
         {
             id: 5,
             title: "To-do App (JavaScript)",
             stack: "HTML, CSS, JavaScript",
             description: "Aplikasi To-do list sederhana menggunakan JavaScript murni. Fitur termasuk menambah, menghapus, dan menandai tugas selesai. Data disimpan di localStorage.",
-            image_url: "https://placehold.co/600x400/4A5C6A/CCD0CF?text=Todo+App&font=poppins",
-            demo_link: "#",
-            github_link: "#"
+            images: [
+                "https://placehold.co/800x600/4A5C6A/CCD0CF?text=Todo+App+-+List+View&font=poppins",
+                "https://placehold.co/800x600/4A5C6A/CCD0CF?text=Todo+App+-+Add+Task&font=poppins",
+                "https://placehold.co/800x600/4A5C6A/CCD0CF?text=Todo+App+-+Completed&font=poppins"
+            ],
+            demo_link: null,
+            github_link: null,
+            figma_link: null
         }
     ];
 
@@ -97,7 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return skills.map(skill => {
                 const item = document.createElement('div');
                 item.className = 'skill-item';
-                item.textContent = skill;
+                
+                // Cek apakah skill punya logo (hard skills) atau hanya text (soft skills)
+                if (typeof skill === 'object' && skill.logo) {
+                    // Hard skill dengan logo
+                    item.innerHTML = `
+                        <img src="${skill.logo}" alt="${skill.name}" class="skill-item__logo">
+                        <span class="skill-item__name">${skill.name}</span>
+                    `;
+                } else {
+                    // Soft skill hanya text
+                    item.textContent = skill;
+                }
+                
                 return item;
             });
         };
@@ -171,13 +241,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
     
     const modalTitle = document.getElementById('modal-title');
-    const modalImage = document.getElementById('modal-image');
+    const modalCarousel = document.getElementById('modal-carousel');
+    const modalCarouselTrack = document.getElementById('modal-carousel-track');
+    const modalPrevBtn = document.getElementById('modal-prev-btn');
+    const modalNextBtn = document.getElementById('modal-next-btn');
     const modalStack = document.getElementById('modal-stack');
     const modalDescription = document.getElementById('modal-description');
     const modalDemoLink = document.getElementById('modal-demo-link');
     const modalGithubLink = document.getElementById('modal-github-link');
+    const modalFigmaLink = document.getElementById('modal-figma-link');
     
     let lastFocusedElement;
+    let currentImageIndex = 0;
+    let currentProject = null;
+
+    function updateCarousel() {
+        if (!currentProject || !currentProject.images) return;
+        
+        const offset = -currentImageIndex * 100;
+        modalCarouselTrack.style.transform = `translateX(${offset}%)`;
+        
+        // Update button states
+        modalPrevBtn.disabled = currentImageIndex === 0;
+        modalNextBtn.disabled = currentImageIndex === currentProject.images.length - 1;
+    }
 
     function openModal(projectId) {
         const project = projects.find(p => p.id === projectId);
@@ -187,29 +274,60 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        currentProject = project;
+        currentImageIndex = 0;
+
         // Simpan elemen yang terakhir di-focus
         lastFocusedElement = document.activeElement;
 
         // Populate modal content
         modalTitle.textContent = project.title;
-        modalImage.src = project.image_url;
-        modalImage.alt = `Screenshot proyek ${project.title}`;
         modalStack.textContent = project.stack;
         modalDescription.innerHTML = project.description;
         
-        // Set link dengan fallback
-        if (project.demo_link && project.demo_link !== '#') {
+        // Build carousel images
+        modalCarouselTrack.innerHTML = '';
+        if (project.images && project.images.length > 0) {
+            project.images.forEach((imgSrc, index) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imgSrc;
+                imgElement.alt = `${project.title} - Screenshot ${index + 1}`;
+                imgElement.className = 'modal__carousel-image';
+                modalCarouselTrack.appendChild(imgElement);
+            });
+            
+            // Show/hide navigation buttons
+            if (project.images.length > 1) {
+                modalPrevBtn.style.display = 'flex';
+                modalNextBtn.style.display = 'flex';
+            } else {
+                modalPrevBtn.style.display = 'none';
+                modalNextBtn.style.display = 'none';
+            }
+        }
+        
+        updateCarousel();
+        
+        // Set links dengan fallback
+        if (project.demo_link) {
             modalDemoLink.href = project.demo_link;
             modalDemoLink.style.display = 'inline-flex';
         } else {
             modalDemoLink.style.display = 'none';
         }
         
-        if (project.github_link && project.github_link !== '#') {
+        if (project.github_link) {
             modalGithubLink.href = project.github_link;
             modalGithubLink.style.display = 'inline-flex';
         } else {
             modalGithubLink.style.display = 'none';
+        }
+        
+        if (project.figma_link) {
+            modalFigmaLink.href = project.figma_link;
+            modalFigmaLink.style.display = 'inline-flex';
+        } else {
+            modalFigmaLink.style.display = 'none';
         }
 
         // Tampilkan modal
@@ -225,12 +343,29 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        currentProject = null;
+        currentImageIndex = 0;
         
         // Kembalikan focus
         if (lastFocusedElement) {
             lastFocusedElement.focus();
         }
     }
+
+    // Carousel navigation
+    modalPrevBtn.addEventListener('click', () => {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            updateCarousel();
+        }
+    });
+
+    modalNextBtn.addEventListener('click', () => {
+        if (currentProject && currentImageIndex < currentProject.images.length - 1) {
+            currentImageIndex++;
+            updateCarousel();
+        }
+    });
 
     // Event listener untuk membuka modal dari card
     projectCards.forEach(card => {
@@ -262,6 +397,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
             closeModal();
         }
+        
+        // Arrow keys untuk navigasi carousel
+        if (modal.getAttribute('aria-hidden') === 'false') {
+            if (e.key === 'ArrowLeft' && currentImageIndex > 0) {
+                currentImageIndex--;
+                updateCarousel();
+            } else if (e.key === 'ArrowRight' && currentProject && currentImageIndex < currentProject.images.length - 1) {
+                currentImageIndex++;
+                updateCarousel();
+            }
+        }
     });
 
     // Trap focus di dalam modal
@@ -291,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyEmailBtn = document.getElementById('copy-email-btn');
 
     if (copyEmailBtn) {
-        const originalLabel = copyEmailBtn.getAttribute('aria-label');
+        const originalText = copyEmailBtn.textContent;
 
         copyEmailBtn.addEventListener('click', async () => {
             const email = 'ridhomaulana25@gmail.com';
@@ -299,21 +445,20 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 await navigator.clipboard.writeText(email);
                 
-                // 1. TAMBAHKAN KELAS 'copied' (INI KUNCINYA)
-                copyEmailBtn.classList.add('copied');
-                copyEmailBtn.setAttribute('aria-label', 'Email Tersalin!');
+                // Berhasil! Ubah teks
+                copyEmailBtn.textContent = 'Copied';
                 copyEmailBtn.disabled = true;
                 
-                // 2. KEMBALIKAN SETELAH 2 DETIK
+                // Kembalikan setelah 2 detik
                 setTimeout(() => {
-                    copyEmailBtn.classList.remove('copied');
-                    copyEmailBtn.setAttribute('aria-label', originalLabel);
+                    copyEmailBtn.textContent = originalText;
                     copyEmailBtn.disabled = false;
                 }, 2000);
                 
             } catch (err) {
-                console.error('Failed to copy email:', err);
-                alert(`Email disalin: ${email}`);
+                // Ini akan gagal jika Anda membuka dari file:///
+                console.error('Gagal menyalin:', err);
+                alert('Gagal menyalin. Silakan jalankan dari server (Live Server).');
             }
         });
     }
