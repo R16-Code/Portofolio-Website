@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Pemecahan Masalah',
         'Manajemen Waktu',
         'Kreativitas',
-        'Detail Oriented'
+        'Teliti dan Detail'
     ];
 
     // === 2. PROJECT DATA ===
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763387382/Cuplikan_layar_2025-11-17_204455_yfdjjz.png",
             ],
             demo_link: null,
-            github_link: null,
+            github_link: 'https://github.com/R16-Code/Dapoer_Djawa',
             figma_link: null
         },
         {
