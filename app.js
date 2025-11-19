@@ -48,12 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 0,
             title: "Dapoer Djawa",
             stack: "PHP, MySQL, CSS",
-            description: "Sebuah landing page modern dan responsif yang dirancang untuk mempromosikan produk UMKM lokal. Fokus pada desain yang bersih, call-to-action yang jelas, dan optimasi kecepatan load.",
+            description: "Sebuah sistem pemesanan dan pembayaran makanan online lengkap untuk Kedai Djawa, diimplementasikan menggunakan PHP, MySQL, HTML, dan CSS. Fitur utamanya mencakup Pemesanan Makanan (dengan keranjang belanja), Pembayaran Online, dan Pelacakan Status Order secara real-time. Sistem ini juga dilengkapi Dashboard Admin untuk mengelola dan memperbarui status pesanan, serta Dashboard Owner untuk memonitor total pendapatan.",
+            catatan: "*Catatan: Proyek ini belum di-host karena memerlukan lingkungan server PHP/MySQL; detail implementasi hanya dapat dilihat melalui tangkapan layar (screenshot)",
             images: [
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202310_h1kqcn.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202155_rtslie.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763299527/Cuplikan_layar_2025-11-16_202234_o2etdz.png",
-                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299526/Cuplikan_layar_2025-11-16_202252_alvula.png"
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763299526/Cuplikan_layar_2025-11-16_202252_alvula.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763387383/Cuplikan_layar_2025-11-17_203705_stzg7k.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763387383/Cuplikan_layar_2025-11-17_203720_f1vsoe.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763387382/Cuplikan_layar_2025-11-17_204455_yfdjjz.png",
             ],
             demo_link: null,
             github_link: null,
@@ -63,24 +67,29 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             title: "Moviepedia",
             stack: "PHP, MySQL, Tailwind",
-            description: "Aplikasi kasir (Point of Sale) berbasis web sederhana yang dibuat dengan PHP natif dan database MySQL. Fitur termasuk manajemen produk, pencatatan transaksi, dan laporan penjualan sederhana.",
+            description: "Moviepedia adalah platform katalog film berbasis web dinamis, dibangun menggunakan PHP native, MySQL, dan styling menggunakan Tailwind CSS. Sistem ini menyediakan fitur penelusuran katalog film dengan filter genre, sistem autentikasi pengguna, fitur Watchlist pribadi untuk menyimpan film favorit, dan tampilan detail film lengkap dengan rating dan trailer YouTube. Dilengkapi juga Dashboard Admin untuk manajemen CRUD (Create, Read, Update, Delete) data film.",
+            catatan: "*Catatan: Proyek ini belum di-host karena memerlukan lingkungan server PHP/MySQL; detail implementasi hanya dapat dilihat melalui tangkapan layar (screenshot).",
             images: [
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210445_cmua9x.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763302045/Cuplikan_layar_2025-11-16_210554_oqwd8b.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763302854/Cuplikan_layar_2025-11-16_211628_cye1cs.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210635_b5unow.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763302043/Cuplikan_layar_2025-11-16_210644_sydp9l.png",
-                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210655_pnxmqx.png"
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763302044/Cuplikan_layar_2025-11-16_210655_pnxmqx.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763386415/Cuplikan_layar_2025-11-17_203224_yn8qrw.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763386415/Cuplikan_layar_2025-11-17_203236_oxpapv.png",
+                "https://res.cloudinary.com/drnnwysol/image/upload/v1763386414/Cuplikan_layar_2025-11-17_203244_ajlaut.png"
             ],
             demo_link: null,
-            github_link: null,
+            github_link: "https://github.com/R16-Code/moviepedia",
             figma_link: null
         },
         {
             id: 2,
             title: "AERO",
             stack: "Figma",
-            description: "Frontend untuk dashboard admin yang menampilkan visualisasi data menggunakan Chart.js. Data diambil dari API (dummy) dan ditampilkan dalam bentuk grafik bar, line, dan pie.",
+            description: "AERO adalah proyek perancangan Sistem Manajemen Tiket Elektronik (ETMS) untuk PT Kereta Api Aero, bertujuan menggantikan sistem tiket manual dan memfasilitasi pembelian online. Fitur utamanya mencakup pembelian tiket online, pembayaran terintegrasi, dan penerbitan E-Tiket digital. Proyek ini juga mencakup Dashboard Admin/Direktur dengan visualisasi data pendapatan dan laporan penjualan strategis.",
+            catatan: "*Catatan: Proyek ini merupakan hasil Tugas Akhir mata kuliah Rancang Kebutuhan Perangkat Lunak dan tidak didasarkan pada implementasi kasus nyata (real case) di perusahaan terkait.",
             images: [
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763303521/LOGIN_hkmvqt.png",
                 "https://res.cloudinary.com/drnnwysol/image/upload/v1763303524/DASHBOARD_byo4r7.png",
@@ -96,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             demo_link: null,
             github_link: null,
-            figma_link: "https://www.figma.com/proto/WyieoHPQBtOYxcjuxNFq4g/Untitled?node-id=421-2516&t=0gj0eIkb7EBGRQiY-1"
+            figma_link: "https://www.figma.com/proto/WyieoHPQBtOYxcjuxNFq4g/Untitled?node-id=0-1&t=9NKCHwbuBpxXPPqH-1"
         },
         {
             id: 3,
@@ -247,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalNextBtn = document.getElementById('modal-next-btn');
     const modalStack = document.getElementById('modal-stack');
     const modalDescription = document.getElementById('modal-description');
+    const modalCatatan = document.getElementById('modal-catatan');
     const modalDemoLink = document.getElementById('modal-demo-link');
     const modalGithubLink = document.getElementById('modal-github-link');
     const modalFigmaLink = document.getElementById('modal-figma-link');
@@ -284,6 +294,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = project.title;
         modalStack.textContent = project.stack;
         modalDescription.innerHTML = project.description;
+        modalCatatan.innerHTML = project.catatan;
+
         
         // Build carousel images
         modalCarouselTrack.innerHTML = '';
@@ -491,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const copyrightEl = document.getElementById('footer-copyright');
     if (copyrightEl) {
         const year = new Date().getFullYear();
-        copyrightEl.innerHTML = `&copy; ${year} Ridho Nur Maulana. Dibuat dengan cinta.`;
+        copyrightEl.innerHTML = `&copy; Copyright ${year} Ridho Nur Maulana. All Rights Reserved`;
     }
 
     // === 10. LOG INFO (Development) ===
