@@ -1001,3 +1001,167 @@ h6 {
     overflow-wrap: anywhere;
   }
 }
+
+/* === RESPONSIVE === */
+
+/* Tablet & Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* 1. MENYESUAIKAN VARIABEL ROOT UNTUK MOBILE */
+  /* Mengurangi ukuran font dan spacing agar tidak terlalu besar di layar kecil */
+  :root {
+    --font-size-4xl: 2.5rem; /* Judul Hero lebih kecil */
+    --font-size-3xl: 2rem;   /* Judul Section lebih kecil */
+    --font-size-2xl: 1.5rem;
+    --font-size-xl: 1.25rem;
+
+    /* Mengurangi spacing drastis agar konten lebih padat */
+    --spacing-3xl: 4rem;
+    --spacing-2xl: 3rem;
+    --spacing-lg: 1.5rem;
+  }
+
+  /* Navbar */
+  .navbar__menu {
+    display: none; /* Menu disembunyikan di mobile (ideally diganti hamburger menu nanti) */
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    /* Mengurangi padding atas/bawah hero */
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  /* PERBAIKAN TOMBOL HERO (Gambar 2) */
+  .hero__cta {
+    flex-direction: column; /* Menumpuk tombol secara vertikal */
+    width: 100%;
+    gap: var(--spacing-sm); /* Jarak antar tombol lebih rapat */
+  }
+
+  .hero__cta .button {
+    width: 100%; /* Tombol memenuhi lebar container */
+    justify-content: center; /* Teks di tengah */
+    padding: 0.8rem; /* Padding tombol sedikit diperkecil */
+  }
+
+  /* About Section */
+  .about__content {
+    grid-template-columns: 1fr; /* Gambar dan teks ditumpuk */
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .about__image {
+    max-width: 200px; /* Gambar profil lebih kecil */
+    margin: 0 auto;
+  }
+
+  .about__status {
+      text-align: left; /* Teks about tetap rata kiri agar mudah dibaca */
+  }
+
+  /* Section Titles */
+  .section__title {
+    /* Garis bawah judul diperpendek di mobile */
+    &::after {
+        width: 60px;
+    }
+  }
+
+  /* Skills Carousel */
+  .skills__track {
+    animation-duration: 20s; /* Scroll lebih cepat di mobile */
+  }
+
+  .skill-item {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .skill-item__logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Project Grid */
+  .project-grid {
+    grid-template-columns: 1fr; /* Proyek ditumpuk satu per satu */
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Penyesuaian container global */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .navbar {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  /* === PERBAIKAN KRUSIAL CONTACT SECTION (Gambar 1) === */
+  .contact__item {
+    /* Mengurangi padding di dalam kartu kontak agar tidak sempit */
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .contact__email-wrapper {
+      /* PENTING: Memastikan teks email dan tombol copy sejajar dengan baik */
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Tombol copy di kanan, email di kiri */
+      gap: 10px;
+      width: 100%;
+  }
+
+  .contact__email-wrapper p {
+      /* PENTING: Memperbaiki email yang terpotong */
+      font-size: 0.9rem; /* Ukuran font sedikit diperkecil */
+      /* Memaksa teks panjang untuk turun baris jika tidak muat, tanpa memotong kata di tengah */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+      text-align: left;
+      /* Memastikan teks mengambil sisa ruang yang tersedia */
+      flex: 1;
+      min-width: 0; /* Perbaikan untuk flexbox item agar bisa mengecil */
+  }
+
+  .copy-text-btn {
+      /* Memastikan tombol copy ukurannya pas */
+      flex-shrink: 0;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.8rem;
+  }
+  /* ================================================= */
+
+
+  /* Modal adjustments for small screens */
+  .modal {
+      padding: var(--spacing-sm);
+  }
+  .modal__content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-height: 85vh;
+  }
+
+  .modal__title {
+      font-size: var(--font-size-xl);
+  }
+
+  .modal__carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal__carousel-btn--prev {
+    left: 5px;
+  }
+
+  .modal__carousel-btn--next {
+    right: 5px;
+  }
+}
