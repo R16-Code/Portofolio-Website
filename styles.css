@@ -900,268 +900,139 @@ h6 {
   transform: translateY(0);
 }
 
-/* === RESPONSIVE === */
+/* =========================================
+   RESPONSIVE & MOBILE FIXES (FINAL)
+   ========================================= */
+
+/* Tablet & Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
   :root {
-    --font-size-3xl: 2rem;
-    --font-size-4xl: 2.5rem;
+    /* Perkecil ukuran font agar proporsional di HP */
+    --font-size-4xl: 2rem;   /* Judul Nama (Hero) */
+    --font-size-3xl: 1.75rem; /* Judul Section */
+    --font-size-2xl: 1.5rem;
+    --font-size-xl: 1.25rem;
+    
+    /* Kurangi jarak antar elemen */
+    --spacing-3xl: 3rem;
+    --spacing-2xl: 2.5rem;
+    --spacing-lg: 1.5rem;
   }
 
+  /* Navbar: Sembunyikan menu di mobile */
   .navbar__menu {
     display: none;
   }
 
-  .hero {
-    min-height: auto;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-
-  .hero__cta {
-    flex-direction: column;
-  }
-
-  .about__content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .about__image {
-    max-width: 250px;
-    margin: 0 auto;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section__title {
-    font-size: var(--font-size-2xl);
-  }
-  
-  .skills__track {
-    animation-duration: 20s;
-  }
-
-  .skill-item {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-sm);
-  }
-  
-  .skill-item__logo {
-    width: 24px;
-    height: 24px;
-  }
-
-  .skills__carousel::before,
-  .skills__carousel::after {
-    width: 50px;
-  }
-}
-
-@media (max-width: 480px) {
+  /* Container: Beri jarak aman kiri-kanan */
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 1.25rem;
   }
 
-  .navbar {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .modal__content {
-    padding: var(--spacing-lg);
-  }
-  
-  .modal__carousel-btn {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .modal__carousel-btn--prev {
-    left: var(--spacing-xs);
-  }
-
-  .modal__carousel-btn--next {
-    right: var(--spacing-xs);
-  }
-}
-
-@media (max-width: 480px) {
-
-  .contact__subtext,
-  .contact__email-wrapper,
-  .contact__methods,
-  .contact__item {
-    max-width: 100%;
-    padding: 0 var(--spacing-md);
-  }
-
-  .contact__item p {
-    font-size: var(--font-size-base);
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-  }
-}
-
-/* === RESPONSIVE === */
-
-/* Tablet & Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-  /* 1. MENYESUAIKAN VARIABEL ROOT UNTUK MOBILE */
-  /* Mengurangi ukuran font dan spacing agar tidak terlalu besar di layar kecil */
-  :root {
-    --font-size-4xl: 2.5rem; /* Judul Hero lebih kecil */
-    --font-size-3xl: 2rem;   /* Judul Section lebih kecil */
-    --font-size-2xl: 1.5rem;
-    --font-size-xl: 1.25rem;
-
-    /* Mengurangi spacing drastis agar konten lebih padat */
-    --spacing-3xl: 4rem;
-    --spacing-2xl: 3rem;
-    --spacing-lg: 1.5rem;
-  }
-
-  /* Navbar */
-  .navbar__menu {
-    display: none; /* Menu disembunyikan di mobile (ideally diganti hamburger menu nanti) */
-  }
-
-  /* Hero Section */
+  /* --- HERO SECTION --- */
   .hero {
     min-height: auto;
-    /* Mengurangi padding atas/bawah hero */
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: 4rem 1rem;
+  }
+  
+  .hero__title {
+    font-size: 2.25rem; /* Ukuran pas untuk nama */
+    line-height: 1.2;
   }
 
-  /* PERBAIKAN TOMBOL HERO (Gambar 2) */
   .hero__cta {
-    flex-direction: column; /* Menumpuk tombol secara vertikal */
+    flex-direction: column; /* Tombol jadi atas-bawah */
+    gap: 1rem;
     width: 100%;
-    gap: var(--spacing-sm); /* Jarak antar tombol lebih rapat */
+    max-width: 300px; /* Batasi lebar agar tidak terlalu "gepeng" */
+    margin: 0 auto;   /* Tengahkan tombol */
   }
 
   .hero__cta .button {
-    width: 100%; /* Tombol memenuhi lebar container */
-    justify-content: center; /* Teks di tengah */
-    padding: 0.8rem; /* Padding tombol sedikit diperkecil */
+    width: 100%;     /* Tombol memenuhi container-nya */
+    justify-content: center;
   }
 
-  /* About Section */
+  /* --- ABOUT SECTION --- */
   .about__content {
-    grid-template-columns: 1fr; /* Gambar dan teks ditumpuk */
+    grid-template-columns: 1fr;
     text-align: center;
-    gap: var(--spacing-lg);
+    gap: 2rem;
   }
 
   .about__image {
-    max-width: 200px; /* Gambar profil lebih kecil */
+    max-width: 200px;
     margin: 0 auto;
   }
-
+  
   .about__status {
-      text-align: left; /* Teks about tetap rata kiri agar mudah dibaca */
+    text-align: left; /* Teks paragraf tetap rata kiri agar enak dibaca */
+    font-size: 0.95rem;
   }
 
-  /* Section Titles */
-  .section__title {
-    /* Garis bawah judul diperpendek di mobile */
-    &::after {
-        width: 60px;
-    }
+  /* --- SKILLS SECTION --- */
+  /* Sembunyikan judul kategori yang terlalu besar, ganti size */
+  .skills__category-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 
-  /* Skills Carousel */
-  .skills__track {
-    animation-duration: 20s; /* Scroll lebih cepat di mobile */
+  /* --- CONTACT SECTION (Perbaikan Utama) --- */
+  .contact__methods {
+    width: 100%;
   }
 
-  .skill-item {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-sm);
-  }
-
-  .skill-item__logo {
-    width: 24px;
-    height: 24px;
-  }
-
-  /* Project Grid */
-  .project-grid {
-    grid-template-columns: 1fr; /* Proyek ditumpuk satu per satu */
-    gap: var(--spacing-lg);
-  }
-}
-
-/* Small Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Penyesuaian container global */
-  .container {
-    padding: 0 var(--spacing-md);
-  }
-
-  .navbar {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  /* === PERBAIKAN KRUSIAL CONTACT SECTION (Gambar 1) === */
   .contact__item {
-    /* Mengurangi padding di dalam kartu kontak agar tidak sempit */
-    padding: var(--spacing-lg) var(--spacing-sm);
+    padding: 1.5rem;
   }
 
+  /* SOLUSI EMAIL: Ubah jadi atas-bawah */
   .contact__email-wrapper {
-      /* PENTING: Memastikan teks email dan tombol copy sejajar dengan baik */
-      display: flex;
-      align-items: center;
-      justify-content: space-between; /* Tombol copy di kanan, email di kiri */
-      gap: 10px;
-      width: 100%;
+    display: flex;
+    flex-direction: column; /* Email di atas, tombol di bawah */
+    gap: 1rem;
+    align-items: stretch; /* Agar tombol memenuhi lebar */
+    margin-top: 0.5rem;
   }
 
   .contact__email-wrapper p {
-      /* PENTING: Memperbaiki email yang terpotong */
-      font-size: 0.9rem; /* Ukuran font sedikit diperkecil */
-      /* Memaksa teks panjang untuk turun baris jika tidak muat, tanpa memotong kata di tengah */
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      hyphens: auto;
-      text-align: left;
-      /* Memastikan teks mengambil sisa ruang yang tersedia */
-      flex: 1;
-      min-width: 0; /* Perbaikan untuk flexbox item agar bisa mengecil */
+    font-size: 1rem;
+    text-align: center;
+    word-break: break-all; /* Jaga-jaga kalau email sangat panjang */
   }
 
+  /* Tombol Copy jadi full width agar mudah dipencet */
   .copy-text-btn {
-      /* Memastikan tombol copy ukurannya pas */
-      flex-shrink: 0;
-      padding: 0.4rem 0.6rem;
-      font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--bg-primary); /* Sedikit beda background */
   }
-  /* ================================================= */
 
-
-  /* Modal adjustments for small screens */
-  .modal {
-      padding: var(--spacing-sm);
-  }
+  /* --- MODAL PROYEK --- */
   .modal__content {
-    padding: var(--spacing-lg) var(--spacing-md);
-    max-height: 85vh;
+    padding: 1.5rem;
+    width: 90%;
+    max-height: 80vh;
   }
-
-  .modal__title {
-      font-size: var(--font-size-xl);
+  
+  .modal__links {
+    flex-direction: column; /* Tombol di modal juga ditumpuk */
   }
-
-  .modal__carousel-btn {
-    width: 36px;
-    height: 36px;
+  
+  .modal__links .button {
+    width: 100%;
+    justify-content: center;
   }
+}
 
-  .modal__carousel-btn--prev {
-    left: 5px;
+/* Extra Small Devices (max-width: 380px) */
+@media (max-width: 380px) {
+  .hero__title {
+    font-size: 1.75rem; /* Lebih kecil lagi untuk HP kecil */
   }
-
-  .modal__carousel-btn--next {
-    right: 5px;
+  
+  .contact__email-wrapper p {
+    font-size: 0.9rem;
   }
 }
