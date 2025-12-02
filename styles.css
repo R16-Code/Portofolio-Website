@@ -984,65 +984,67 @@ h6 {
   }
 }
 
-/* --- Tablet (≤ 768px) --- */
+/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
-    body {
+
+    section,
+    .hero,
+    .container,
+    .contact,
+    .skills-section {
         padding: 0 20px;
     }
 
-    .container {
-        max-width: 90%;
-        padding: 20px;
+    .hero-text h1 {
+        font-size: 32px;
     }
 
-    header img {
-        width: 120px;
-        height: auto;
-    }
-
-    h1 {
-        font-size: 28px;
+    .hero-text p {
+        font-size: 16px;
     }
 
     .button-group {
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-  }
-
-    button {
-        width: 100%;
-        font-size: 16px;
-        padding: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 }
 
-/* --- HP (≤ 480px) --- */
+/* HP (≤ 480px) */
 @media (max-width: 480px) {
-    .container {
-        max-width: 100%;
-        padding: 16px;
-    }
 
-    h1 {
-        font-size: 22px;
+    .hero-text h1 {
+        font-size: 26px;
+        line-height: 1.2;
         text-align: center;
     }
 
-    p {
+    .hero-text p {
         font-size: 14px;
+        text-align: center;
     }
 
-    button {
-        padding: 12px;
-        font-size: 14px;
+    /* INI YANG BENER-BENER FIX PERMASALAHAN EMAIL KE-KEPOTONG */
+    .contact-section,
+    .contact-text,
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .contact-text p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .button-group {
         flex-direction: column;
+        width: 100%;
     }
 
-    header img {
-        width: 100px;
+    .button-group button {
+        width: 100%;
     }
 }
