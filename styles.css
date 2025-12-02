@@ -901,138 +901,134 @@ h6 {
 }
 
 /* =========================================
-   RESPONSIVE & MOBILE FIXES (FINAL)
+   RESPONSIVE & MOBILE FIXES (SUPER WIDE SPACING)
    ========================================= */
 
 /* Tablet & Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
+  /* 1. VARIABEL DASAR */
   :root {
-    /* Perkecil ukuran font agar proporsional di HP */
-    --font-size-4xl: 2rem;   /* Judul Nama (Hero) */
-    --font-size-3xl: 1.75rem; /* Judul Section */
+    --font-size-4xl: 2.25rem;
+    --font-size-3xl: 2rem;
     --font-size-2xl: 1.5rem;
     --font-size-xl: 1.25rem;
     
-    /* Kurangi jarak antar elemen */
-    --spacing-3xl: 3rem;
-    --spacing-2xl: 2.5rem;
-    --spacing-lg: 1.5rem;
+    /* Kita tidak hanya mengandalkan variabel ini, 
+       tapi kita definisikan ulang padding di bawah */
+    --spacing-3xl: 6rem; 
   }
 
-  /* Navbar: Sembunyikan menu di mobile */
-  .navbar__menu {
-    display: none;
+  /* 2. PAKSA JARAK ANTAR SECTION (PENTING) */
+  /* Ini akan membuat jarak Hero, About, Skills, Projects, Contact jadi JAUH */
+  .hero, 
+  .about, 
+  .skills, 
+  .projects, 
+  .contact {
+    /* Padding Atas & Bawah dibuat 120px (7.5rem) */
+    /* Menggunakan !important untuk memastikan ini menang dari settingan lain */
+    padding-top: 7.5rem !important; 
+    padding-bottom: 7.5rem !important;
   }
 
-  /* Container: Beri jarak aman kiri-kanan */
-  .container {
-    padding: 0 1.25rem;
+  /* Tambahan Margin khusus untuk Judul Section */
+  .section__title {
+    margin-top: 1rem;
+    margin-bottom: 3.5rem !important; /* Jarak judul ke konten di bawahnya */
   }
+
+  /* Navbar */
+  .navbar__menu { display: none; }
+  .container { padding: 0 1.5rem; }
 
   /* --- HERO SECTION --- */
   .hero {
-    min-height: auto;
-    padding: 4rem 1rem;
+    /* Khusus hero, kita atur agar teks tidak terlalu mepet atas */
+    padding-top: 8rem !important; 
   }
   
   .hero__title {
-    font-size: 2.25rem; /* Ukuran pas untuk nama */
+    font-size: 2.5rem;
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .hero__cta {
-    flex-direction: column; /* Tombol jadi atas-bawah */
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.25rem;
     width: 100%;
-    max-width: 300px; /* Batasi lebar agar tidak terlalu "gepeng" */
-    margin: 0 auto;   /* Tengahkan tombol */
+    max-width: 320px;
+    margin: 2.5rem auto 0; /* Jarak extra di atas tombol */
   }
 
   .hero__cta .button {
-    width: 100%;     /* Tombol memenuhi container-nya */
+    width: 100%;
     justify-content: center;
+    padding: 1rem;
   }
 
   /* --- ABOUT SECTION --- */
   .about__content {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .about__image {
-    max-width: 200px;
+    max-width: 240px; /* Foto sedikit dibesarkan agar proporsional */
     margin: 0 auto;
+    margin-bottom: 1rem;
   }
   
   .about__status {
-    text-align: left; /* Teks paragraf tetap rata kiri agar enak dibaca */
-    font-size: 0.95rem;
+    text-align: justify; /* Kembali ke justify agar rapi blok kiri-kanan */
+    font-size: 1rem;
+    line-height: 1.8;
   }
 
   /* --- SKILLS SECTION --- */
-  /* Sembunyikan judul kategori yang terlalu besar, ganti size */
-  .skills__category-title {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+  .skills__category {
+    margin-bottom: 5rem; /* Jarak jauh antar kategori Hard & Soft skill */
   }
 
-  /* --- CONTACT SECTION (Perbaikan Utama) --- */
-  .contact__methods {
-    width: 100%;
-  }
-
+  /* --- CONTACT SECTION (FIX EMAIL) --- */
   .contact__item {
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
-  /* SOLUSI EMAIL: Ubah jadi atas-bawah */
   .contact__email-wrapper {
     display: flex;
-    flex-direction: column; /* Email di atas, tombol di bawah */
-    gap: 1rem;
-    align-items: stretch; /* Agar tombol memenuhi lebar */
-    margin-top: 0.5rem;
+    flex-direction: column; /* Vertikal: Atas Bawah */
+    gap: 1.5rem;
+    margin-top: 1rem;
   }
 
   .contact__email-wrapper p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    word-break: break-all;
     text-align: center;
-    word-break: break-all; /* Jaga-jaga kalau email sangat panjang */
   }
 
-  /* Tombol Copy jadi full width agar mudah dipencet */
   .copy-text-btn {
     width: 100%;
-    text-align: center;
-    padding: 0.75rem;
-    background: var(--bg-primary); /* Sedikit beda background */
+    padding: 1rem;
   }
 
-  /* --- MODAL PROYEK --- */
+  /* --- MODAL --- */
   .modal__content {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     width: 90%;
-    max-height: 80vh;
+    max-height: 85vh;
   }
-  
   .modal__links {
-    flex-direction: column; /* Tombol di modal juga ditumpuk */
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  .modal__links .button {
-    width: 100%;
-    justify-content: center;
-  }
+  .modal__links .button { width: 100%; justify-content: center; }
 }
 
-/* Extra Small Devices (max-width: 380px) */
+/* HP Sangat Kecil (iPhone SE / Android kecil) */
 @media (max-width: 380px) {
-  .hero__title {
-    font-size: 1.75rem; /* Lebih kecil lagi untuk HP kecil */
-  }
-  
-  .contact__email-wrapper p {
-    font-size: 0.9rem;
-  }
+  .hero__title { font-size: 2rem; }
+  .section__title { font-size: 1.75rem; }
 }
