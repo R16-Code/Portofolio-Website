@@ -97,9 +97,8 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -119,9 +118,8 @@ button {
 /* === CONTAINER === */
 .container {
   width: 100%;
-  max-width: var(--container-max);
+  max-width: 480px;   /* batas aman utk HP & tablet */
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
 }
 
 /* === TYPOGRAPHY === */
@@ -984,4 +982,67 @@ h6 {
   .modal__carousel-btn--next {
     right: var(--spacing-xs);
   }
+}
+
+/* --- Tablet (≤ 768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    header img {
+        width: 120px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+  }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* --- HP (≤ 480px) --- */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    header img {
+        width: 100px;
+    }
 }
